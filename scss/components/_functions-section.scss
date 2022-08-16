@@ -1,0 +1,100 @@
+.functions {
+    
+    &__quality-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        
+        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width:1200px) {
+            display: flex;
+            flex-wrap: nowrap;
+            
+        }
+
+    }
+
+    &__quality {
+        text-align: center;
+        box-sizing: border-box;
+        
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc(
+                (100% - 1 * 30px)/2
+                );
+            text-align: left;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc(
+                (100% - 2 * 30px)/2
+                );
+            text-align: left;
+        }
+
+    }
+        
+    
+    &__quality-group {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-width: 270px;
+        height: 120px;
+        background: var(--background-color-team);
+        border-radius: 4px;
+        margin-bottom: 30px;
+
+        
+    }
+        
+    &__title {
+        color: var(--title-text-color);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    
+
+
+        
+       
+    &__quality:not(:last-child) {
+        @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+        }
+    }
+
+    &__quality:nth-child(odd) {
+        @media screen and (min-width: 768px) {        
+            margin-right: 30px;
+        }
+    }
+    
+    &__quality:nth-child(-n + 2) {
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__quality:not(:last-child) {
+        @media screen and (min-width: 1200px) {
+        margin-right: 30px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;    
+    }
+}

@@ -1,0 +1,25 @@
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+  
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 250ms;
+  
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  
+    &__is-open {
+      transform: translateX(0);
+      visibility: visible;
+      pointer-events: initial;
+    }
+  }
