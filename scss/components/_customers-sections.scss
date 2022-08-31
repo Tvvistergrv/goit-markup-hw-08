@@ -14,6 +14,9 @@
 .company {
     display: flex;
     flex-wrap: wrap;
+    
+
+    
 
     @media screen and (min-width:1200px) {
         flex-wrap: nowrap;
@@ -23,6 +26,13 @@
         text-align: center;
         box-sizing: border-box;
         cursor: pointer;
+
+        @media screen and (max-width:479px) {
+            min-width: 100%;
+            height: auto;
+            margin-right: 0;
+    
+        }
 
         @media screen and (min-width: 480px) and (max-width: 767px) {
             flex-basis: calc(
@@ -50,7 +60,7 @@
     }
 
     &__group:nth-child(odd) {
-        @media screen and (max-width: 767px) {        
+        @media screen and (min-width: 480px) and (max-width: 767px) {        
             margin-right: 30px;
         }
     }
@@ -74,14 +84,13 @@
     }
     
     &__group:not(:last-child) {
-        @media screen and (max-width: 480px) {
-        margin-right: 30px;
-        }
-
-    &__group:not(:last-child) {
         @media screen and (min-width: 1200px) {
         margin-right: 30px;
         }
+
+        @media screen and (max-width: 479px) {
+            margin-bottom: 30px;
+            }
     }
     
     &__link {
@@ -108,7 +117,7 @@
     
 
     &__link:focus,
-    &__link:hover{
+    &__link:hover {
         fill: var(--accent-color);
         border: 1px solid var(--accent-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
